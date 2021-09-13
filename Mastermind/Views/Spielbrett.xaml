@@ -1,0 +1,592 @@
+﻿<UserControl x:Class="Mastermind.Views.Spielbrett"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Mastermind.Views"
+      mc:Ignorable="d" 
+      d:DesignHeight="1100" d:DesignWidth="700">
+
+
+    <ScrollViewer>
+        <Grid>
+            <Grid Name="SpielBrett" Height="1200" Width="700" Visibility="{Binding Path=GameBoardData.Code4Visibility}">
+                <Grid Name="FarbPinGrid4" Background="#FF6C3100" Height="1200" Width="400" HorizontalAlignment="Left" VerticalAlignment="Top">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="45" />
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+
+                        <ColumnDefinition Width="200" />
+                        <ColumnDefinition Width="50" />
+                        <ColumnDefinition Width="50" />
+                        <ColumnDefinition Width="50" />
+                        <ColumnDefinition Width="50" />
+                    </Grid.ColumnDefinitions>
+
+                    <Button Command="{Binding Btn_ChangeColor}" CommandParameter="0" Background="{Binding Path=GameBoardData.PinColors[0-0]}" Grid.Column="1" Grid.Row="1" Height="40" Width="40"/>
+                    <Button Command="{Binding Btn_ChangeColor}" CommandParameter="1" Background="{Binding Path=GameBoardData.PinColors[0-1]}" Grid.Column="2" Grid.Row="1" Height="40" Width="40"/>
+                    <Button Command="{Binding Btn_ChangeColor}" CommandParameter="2" Background="{Binding Path=GameBoardData.PinColors[0-2]}" Grid.Column="3" Grid.Row="1" Height="40" Width="40"/>
+                    <Button Command="{Binding Btn_ChangeColor}" CommandParameter="3" Background="{Binding Path=GameBoardData.PinColors[0-3]}" Grid.Column="4" Grid.Row="1" Height="40" Width="40"/>
+
+
+                    <Button Command="{Binding Btn_ChangeColor}" CommandParameter="0" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[1-0]}" Background="{Binding Path=GameBoardData.PinColors[1-0]}" Grid.Column="1" Grid.Row="2" Height="40" Width="40"/>
+                    <Button Command="{Binding Btn_ChangeColor}" CommandParameter="1" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[1-1]}" Background="{Binding Path=GameBoardData.PinColors[1-1]}" Grid.Column="2" Grid.Row="2" Height="40" Width="40"/>
+                    <Button Command="{Binding Btn_ChangeColor}" CommandParameter="2" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[1-2]}" Background="{Binding Path=GameBoardData.PinColors[1-2]}" Grid.Column="3" Grid.Row="2" Height="40" Width="40"/>
+                    <Button Command="{Binding Btn_ChangeColor}" CommandParameter="3" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[1-3]}" Background="{Binding Path=GameBoardData.PinColors[1-3]}" Grid.Column="4" Grid.Row="2" Height="40" Width="40"/>
+
+                    <Button Command="{Binding Btn_ChangeColor}" CommandParameter="0" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[2-0]}" Background="{Binding Path=GameBoardData.PinColors[2-0]}" Grid.Column="1" Grid.Row="3" Height="40" Width="40"/>
+                    <Button Command="{Binding Btn_ChangeColor}" CommandParameter="1" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[2-1]}" Background="{Binding Path=GameBoardData.PinColors[2-1]}" Grid.Column="2" Grid.Row="3" Height="40" Width="40"/>
+                    <Button Command="{Binding Btn_ChangeColor}" CommandParameter="2" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[2-2]}" Background="{Binding Path=GameBoardData.PinColors[2-2]}" Grid.Column="3" Grid.Row="3" Height="40" Width="40"/>
+                    <Button Command="{Binding Btn_ChangeColor}" CommandParameter="3" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[2-3]}" Background="{Binding Path=GameBoardData.PinColors[2-3]}" Grid.Column="4" Grid.Row="3" Height="40" Width="40"/>
+
+                    <Button Command="{Binding Btn_ChangeColor}" CommandParameter="0" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[3-0]}" Background="{Binding Path=GameBoardData.PinColors[3-0]}" Grid.Column="1" Grid.Row="4" Height="40" Width="40"/>
+                    <Button Command="{Binding Btn_ChangeColor}" CommandParameter="1" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[3-1]}" Background="{Binding Path=GameBoardData.PinColors[3-1]}" Grid.Column="2" Grid.Row="4" Height="40" Width="40"/>
+                    <Button Command="{Binding Btn_ChangeColor}" CommandParameter="2" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[3-2]}" Background="{Binding Path=GameBoardData.PinColors[3-2]}" Grid.Column="3" Grid.Row="4" Height="40" Width="40"/>
+                    <Button Command="{Binding Btn_ChangeColor}" CommandParameter="3" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[3-3]}" Background="{Binding Path=GameBoardData.PinColors[3-3]}" Grid.Column="4" Grid.Row="4" Height="40" Width="40"/>
+
+                    <Button Command="{Binding Btn_ChangeColor}" CommandParameter="0" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[4-0]}" Background="{Binding Path=GameBoardData.PinColors[4-0]}" Grid.Column="1" Grid.Row="5" Height="40" Width="40"/>
+                    <Button Command="{Binding Btn_ChangeColor}" CommandParameter="1" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[4-1]}" Background="{Binding Path=GameBoardData.PinColors[4-1]}" Grid.Column="2" Grid.Row="5" Height="40" Width="40"/>
+                    <Button Command="{Binding Btn_ChangeColor}" CommandParameter="2" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[4-2]}" Background="{Binding Path=GameBoardData.PinColors[4-2]}" Grid.Column="3" Grid.Row="5" Height="40" Width="40"/>
+                    <Button Command="{Binding Btn_ChangeColor}" CommandParameter="3" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[4-3]}" Background="{Binding Path=GameBoardData.PinColors[4-3]}" Grid.Column="4" Grid.Row="5" Height="40" Width="40"/>
+
+                    <Button Command="{Binding Btn_ChangeColor}" CommandParameter="0" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[5-0]}" Background="{Binding Path=GameBoardData.PinColors[5-0]}" Grid.Column="1" Grid.Row="6" Height="40" Width="40"/>
+                    <Button Command="{Binding Btn_ChangeColor}" CommandParameter="1" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[5-1]}" Background="{Binding Path=GameBoardData.PinColors[5-1]}" Grid.Column="2" Grid.Row="6" Height="40" Width="40"/>
+                    <Button Command="{Binding Btn_ChangeColor}" CommandParameter="2" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[5-2]}" Background="{Binding Path=GameBoardData.PinColors[5-2]}" Grid.Column="3" Grid.Row="6" Height="40" Width="40"/>
+                    <Button Command="{Binding Btn_ChangeColor}" CommandParameter="3" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[5-3]}" Background="{Binding Path=GameBoardData.PinColors[5-3]}" Grid.Column="4" Grid.Row="6" Height="40" Width="40"/>
+
+                    <Button Command="{Binding Btn_ChangeColor}" CommandParameter="0" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[6-0]}" Background="{Binding Path=GameBoardData.PinColors[6-0]}" Grid.Column="1" Grid.Row="7" Height="40" Width="40"/>
+                    <Button Command="{Binding Btn_ChangeColor}" CommandParameter="1" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[6-1]}" Background="{Binding Path=GameBoardData.PinColors[6-1]}" Grid.Column="2" Grid.Row="7" Height="40" Width="40"/>
+                    <Button Command="{Binding Btn_ChangeColor}" CommandParameter="2" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[6-2]}" Background="{Binding Path=GameBoardData.PinColors[6-2]}" Grid.Column="3" Grid.Row="7" Height="40" Width="40"/>
+                    <Button Command="{Binding Btn_ChangeColor}" CommandParameter="3" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[6-3]}" Background="{Binding Path=GameBoardData.PinColors[6-3]}" Grid.Column="4" Grid.Row="7" Height="40" Width="40"/>
+
+                    <Button Command="{Binding Btn_ChangeColor}" CommandParameter="0" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[7-0]}" Background="{Binding Path=GameBoardData.PinColors[7-0]}" Grid.Column="1" Grid.Row="8" Height="40" Width="40"/>
+                    <Button Command="{Binding Btn_ChangeColor}" CommandParameter="1" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[7-1]}" Background="{Binding Path=GameBoardData.PinColors[7-1]}" Grid.Column="2" Grid.Row="8" Height="40" Width="40"/>
+                    <Button Command="{Binding Btn_ChangeColor}" CommandParameter="2" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[7-2]}" Background="{Binding Path=GameBoardData.PinColors[7-2]}" Grid.Column="3" Grid.Row="8" Height="40" Width="40"/>
+                    <Button Command="{Binding Btn_ChangeColor}" CommandParameter="3" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[7-3]}" Background="{Binding Path=GameBoardData.PinColors[7-3]}" Grid.Column="4" Grid.Row="8" Height="40" Width="40"/>
+
+                    <Button Command="{Binding Btn_ChangeColor}" CommandParameter="0" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[8-0]}" Background="{Binding Path=GameBoardData.PinColors[8-0]}" Grid.Column="1" Grid.Row="9" Height="40" Width="40"/>
+                    <Button Command="{Binding Btn_ChangeColor}" CommandParameter="1" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[8-1]}" Background="{Binding Path=GameBoardData.PinColors[8-1]}" Grid.Column="2" Grid.Row="9" Height="40" Width="40"/>
+                    <Button Command="{Binding Btn_ChangeColor}" CommandParameter="2" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[8-2]}" Background="{Binding Path=GameBoardData.PinColors[8-2]}" Grid.Column="3" Grid.Row="9" Height="40" Width="40"/>
+                    <Button Command="{Binding Btn_ChangeColor}" CommandParameter="3" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[8-3]}" Background="{Binding Path=GameBoardData.PinColors[8-3]}" Grid.Column="4" Grid.Row="9" Height="40" Width="40"/>
+
+                    <Button Command="{Binding Btn_ChangeColor}" CommandParameter="0" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[9-0]}" Background="{Binding Path=GameBoardData.PinColors[9-0]}" Grid.Column="1" Grid.Row="10"  Height="40" Width="40"/>
+                    <Button Command="{Binding Btn_ChangeColor}" CommandParameter="1" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[9-1]}" Background="{Binding Path=GameBoardData.PinColors[9-1]}" Grid.Column="2" Grid.Row="10"  Height="40" Width="40"/>
+                    <Button Command="{Binding Btn_ChangeColor}" CommandParameter="2" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[9-2]}" Background="{Binding Path=GameBoardData.PinColors[9-2]}" Grid.Column="3" Grid.Row="10"  Height="40" Width="40"/>
+                    <Button Command="{Binding Btn_ChangeColor}" CommandParameter="3" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[9-3]}" Background="{Binding Path=GameBoardData.PinColors[9-3]}" Grid.Column="4" Grid.Row="10"  Height="40" Width="40"/>
+
+                    <Button Command="{Binding Btn_ChangeColor}" CommandParameter="0" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[10-0]}" Background="{Binding Path=GameBoardData.PinColors[10-0]}" Grid.Column="1" Grid.Row="11" Height="40" Width="40"/>
+                    <Button Command="{Binding Btn_ChangeColor}" CommandParameter="1" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[10-1]}" Background="{Binding Path=GameBoardData.PinColors[10-1]}" Grid.Column="2" Grid.Row="11" Height="40" Width="40"/>
+                    <Button Command="{Binding Btn_ChangeColor}" CommandParameter="2" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[10-2]}" Background="{Binding Path=GameBoardData.PinColors[10-2]}" Grid.Column="3" Grid.Row="11" Height="40" Width="40"/>
+                    <Button Command="{Binding Btn_ChangeColor}" CommandParameter="3" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[10-3]}" Background="{Binding Path=GameBoardData.PinColors[10-3]}" Grid.Column="4" Grid.Row="11" Height="40" Width="40"/>
+
+                    <Button Command="{Binding Btn_ChangeColor}" CommandParameter="0" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[11-0]}" Background="{Binding Path=GameBoardData.PinColors[11-0]}" Grid.Column="1" Grid.Row="12" Height="40" Width="40"/>
+                    <Button Command="{Binding Btn_ChangeColor}" CommandParameter="1" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[11-1]}" Background="{Binding Path=GameBoardData.PinColors[11-1]}" Grid.Column="2" Grid.Row="12" Height="40" Width="40"/>
+                    <Button Command="{Binding Btn_ChangeColor}" CommandParameter="2" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[11-2]}" Background="{Binding Path=GameBoardData.PinColors[11-2]}" Grid.Column="3" Grid.Row="12" Height="40" Width="40"/>
+                    <Button Command="{Binding Btn_ChangeColor}" CommandParameter="3" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[11-3]}" Background="{Binding Path=GameBoardData.PinColors[11-3]}" Grid.Column="4" Grid.Row="12" Height="40" Width="40"/>
+
+                    <Button Command="{Binding Btn_ChangeColor}" CommandParameter="0" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[12-0]}" Background="{Binding Path=GameBoardData.PinColors[12-0]}" Grid.Column="1" Grid.Row="13" Height="40" Width="40"/>
+                    <Button Command="{Binding Btn_ChangeColor}" CommandParameter="1" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[12-1]}" Background="{Binding Path=GameBoardData.PinColors[12-1]}" Grid.Column="2" Grid.Row="13" Height="40" Width="40"/>
+                    <Button Command="{Binding Btn_ChangeColor}" CommandParameter="2" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[12-2]}" Background="{Binding Path=GameBoardData.PinColors[12-2]}" Grid.Column="3" Grid.Row="13" Height="40" Width="40"/>
+                    <Button Command="{Binding Btn_ChangeColor}" CommandParameter="3" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[12-3]}" Background="{Binding Path=GameBoardData.PinColors[12-3]}" Grid.Column="4" Grid.Row="13" Height="40" Width="40"/>
+
+                    <Button Command="{Binding Btn_ChangeColor}" CommandParameter="0" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[13-0]}" Background="{Binding Path=GameBoardData.PinColors[13-0]}" Grid.Column="1" Grid.Row="14" Height="40" Width="40"/>
+                    <Button Command="{Binding Btn_ChangeColor}" CommandParameter="1" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[13-1]}" Background="{Binding Path=GameBoardData.PinColors[13-1]}" Grid.Column="2" Grid.Row="14" Height="40" Width="40"/>
+                    <Button Command="{Binding Btn_ChangeColor}" CommandParameter="2" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[13-2]}" Background="{Binding Path=GameBoardData.PinColors[13-2]}" Grid.Column="3" Grid.Row="14" Height="40" Width="40"/>
+                    <Button Command="{Binding Btn_ChangeColor}" CommandParameter="3" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[13-3]}" Background="{Binding Path=GameBoardData.PinColors[13-3]}" Grid.Column="4" Grid.Row="14" Height="40" Width="40"/>
+
+                    <Button Command="{Binding Btn_ChangeColor}" CommandParameter="0" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[14-0]}" Background="{Binding Path=GameBoardData.PinColors[14-0]}" Grid.Column="1" Grid.Row="15" Height="40" Width="40"/>
+                    <Button Command="{Binding Btn_ChangeColor}" CommandParameter="1" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[14-1]}" Background="{Binding Path=GameBoardData.PinColors[14-1]}" Grid.Column="2" Grid.Row="15" Height="40" Width="40"/>
+                    <Button Command="{Binding Btn_ChangeColor}" CommandParameter="2" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[14-2]}" Background="{Binding Path=GameBoardData.PinColors[14-2]}" Grid.Column="3" Grid.Row="15" Height="40" Width="40"/>
+                    <Button Command="{Binding Btn_ChangeColor}" CommandParameter="3" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[14-3]}" Background="{Binding Path=GameBoardData.PinColors[14-3]}" Grid.Column="4" Grid.Row="15" Height="40" Width="40"/>
+
+
+                    <Button Command="{Binding Btn_CheckCode}" CommandParameter="0" Content="Überprüfen" FontSize="25" Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="17"/>
+
+
+                    <Label  Height="4" BorderThickness="3" BorderBrush="Black" Grid.Row="1" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="5"/>
+                    <Label  Height="4" BorderThickness="3" BorderBrush="Black" Grid.Row="2" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="5"/>
+                    <Label  Height="4" BorderThickness="3" BorderBrush="Black" Grid.Row="3" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="5"/>
+                    <Label  Height="4" BorderThickness="3" BorderBrush="Black" Grid.Row="4" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="5"/>
+                    <Label  Height="4" BorderThickness="3" BorderBrush="Black" Grid.Row="5" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="5"/>
+                    <Label  Height="4" BorderThickness="3" BorderBrush="Black" Grid.Row="6" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="5"/>
+                    <Label  Height="4" BorderThickness="3" BorderBrush="Black" Grid.Row="7" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="5"/>
+                    <Label  Height="4" BorderThickness="3" BorderBrush="Black" Grid.Row="8" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="5"/>
+                    <Label  Height="4" BorderThickness="3" BorderBrush="Black" Grid.Row="9" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="5"/>
+                    <Label  Height="4" BorderThickness="3" BorderBrush="Black" Grid.Row="10" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="5"/>
+                    <Label  Height="4" BorderThickness="3" BorderBrush="Black" Grid.Row="11" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="5"/>
+                    <Label  Height="4" BorderThickness="3" BorderBrush="Black" Grid.Row="12" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="5"/>
+                    <Label  Height="4" BorderThickness="3" BorderBrush="Black" Grid.Row="13" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="5"/>
+                    <Label  Height="4" BorderThickness="3" BorderBrush="Black" Grid.Row="14" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="5"/>
+                    <Label  Height="4" BorderThickness="3" BorderBrush="Black" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="4" Margin="0,1,0,46"/>
+                    <Label  Height="4" BorderThickness="3" BorderBrush="Black" Grid.Row="16" Grid.Column="1" Grid.ColumnSpan="4" Margin="0,0,0,97"/>
+                    <Label BorderThickness="3" BorderBrush="Black" Grid.Row="1" Grid.RowSpan="15" Grid.Column="1" Margin="0,0,47,0" />
+                    <Label BorderThickness="3" BorderBrush="Black" Grid.Row="1" Grid.RowSpan="16" Grid.Column="4" Margin="47,5,0,97" />
+
+                    <Label FontSize="30" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Content="{Binding Path=GameBoardData.Try}"/>
+                </Grid>
+
+
+                <Grid Name="KontrollPinGrid4" Background="#FF6C3100" Height="1200" Width="300" HorizontalAlignment="Right" VerticalAlignment="Top">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50"/>
+                        <ColumnDefinition Width="20"/>
+                        <ColumnDefinition Width="20"/>
+                        <ColumnDefinition Width="20"/>
+                        <ColumnDefinition Width="20"/>
+                        <ColumnDefinition Width="20"/>
+                        <ColumnDefinition Width="200"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="300"/>
+
+                    </Grid.RowDefinitions>
+
+                    <Label Background="{Binding Path=GameBoardData.CheckPinColors[0-0]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="1" Grid.Row="1" />
+                    <Label Background="{Binding Path=GameBoardData.CheckPinColors[0-1]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="2" Grid.Row="1" />
+                    <Label Background="{Binding Path=GameBoardData.CheckPinColors[0-2]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="3" Grid.Row="1" />
+                    <Label Background="{Binding Path=GameBoardData.CheckPinColors[0-3]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="4" Grid.Row="1" />
+
+                    <Label Background="{Binding Path=GameBoardData.CheckPinColors[1-0]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="1" Grid.Row="3" />
+                    <Label Background="{Binding Path=GameBoardData.CheckPinColors[1-1]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="2" Grid.Row="3" />
+                    <Label Background="{Binding Path=GameBoardData.CheckPinColors[1-2]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="3" Grid.Row="3" />
+                    <Label Background="{Binding Path=GameBoardData.CheckPinColors[1-3]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="4" Grid.Row="3" />
+
+                    <Label Background="{Binding Path=GameBoardData.CheckPinColors[2-0]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="1" Grid.Row="5" />
+                    <Label Background="{Binding Path=GameBoardData.CheckPinColors[2-1]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="2" Grid.Row="5" />
+                    <Label Background="{Binding Path=GameBoardData.CheckPinColors[2-2]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="3" Grid.Row="5" />
+                    <Label Background="{Binding Path=GameBoardData.CheckPinColors[2-3]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="4" Grid.Row="5" />
+
+                    <Label Background="{Binding Path=GameBoardData.CheckPinColors[3-0]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="1" Grid.Row="7" />
+                    <Label Background="{Binding Path=GameBoardData.CheckPinColors[3-1]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="2" Grid.Row="7" />
+                    <Label Background="{Binding Path=GameBoardData.CheckPinColors[3-2]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="3" Grid.Row="7" />
+                    <Label Background="{Binding Path=GameBoardData.CheckPinColors[3-3]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="4" Grid.Row="7" />
+
+                    <Label Background="{Binding Path=GameBoardData.CheckPinColors[4-0]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="1" Grid.Row="9" />
+                    <Label Background="{Binding Path=GameBoardData.CheckPinColors[4-1]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="2" Grid.Row="9" />
+                    <Label Background="{Binding Path=GameBoardData.CheckPinColors[4-2]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="3" Grid.Row="9" />
+                    <Label Background="{Binding Path=GameBoardData.CheckPinColors[4-3]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="4" Grid.Row="9" />
+
+                    <Label Background="{Binding Path=GameBoardData.CheckPinColors[5-0]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="1" Grid.Row="11" />
+                    <Label Background="{Binding Path=GameBoardData.CheckPinColors[5-1]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="2" Grid.Row="11" />
+                    <Label Background="{Binding Path=GameBoardData.CheckPinColors[5-2]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="3" Grid.Row="11" />
+                    <Label Background="{Binding Path=GameBoardData.CheckPinColors[5-3]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="4" Grid.Row="11" />
+
+                    <Label Background="{Binding Path=GameBoardData.CheckPinColors[6-0]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="1" Grid.Row="13" />
+                    <Label Background="{Binding Path=GameBoardData.CheckPinColors[6-1]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="2" Grid.Row="13" />
+                    <Label Background="{Binding Path=GameBoardData.CheckPinColors[6-2]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="3" Grid.Row="13" />
+                    <Label Background="{Binding Path=GameBoardData.CheckPinColors[6-3]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="4" Grid.Row="13" />
+
+                    <Label Background="{Binding Path=GameBoardData.CheckPinColors[7-0]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="1" Grid.Row="15" />
+                    <Label Background="{Binding Path=GameBoardData.CheckPinColors[7-1]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="2" Grid.Row="15" />
+                    <Label Background="{Binding Path=GameBoardData.CheckPinColors[7-2]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="3" Grid.Row="15" />
+                    <Label Background="{Binding Path=GameBoardData.CheckPinColors[7-3]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="4" Grid.Row="15" />
+
+                    <Label Background="{Binding Path=GameBoardData.CheckPinColors[8-0]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="1" Grid.Row="17" />
+                    <Label Background="{Binding Path=GameBoardData.CheckPinColors[8-1]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="2" Grid.Row="17" />
+                    <Label Background="{Binding Path=GameBoardData.CheckPinColors[8-2]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="3" Grid.Row="17" />
+                    <Label Background="{Binding Path=GameBoardData.CheckPinColors[8-3]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="4" Grid.Row="17" />
+
+                    <Label Background="{Binding Path=GameBoardData.CheckPinColors[9-0]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="1" Grid.Row="19" />
+                    <Label Background="{Binding Path=GameBoardData.CheckPinColors[9-1]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="2" Grid.Row="19" />
+                    <Label Background="{Binding Path=GameBoardData.CheckPinColors[9-2]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="3" Grid.Row="19" />
+                    <Label Background="{Binding Path=GameBoardData.CheckPinColors[9-3]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="4" Grid.Row="19" />
+
+                    <Label Background="{Binding Path=GameBoardData.CheckPinColors[10-0]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="1" Grid.Row="21" />
+                    <Label Background="{Binding Path=GameBoardData.CheckPinColors[10-1]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="2" Grid.Row="21" />
+                    <Label Background="{Binding Path=GameBoardData.CheckPinColors[10-2]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="3" Grid.Row="21" />
+                    <Label Background="{Binding Path=GameBoardData.CheckPinColors[10-3]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="4" Grid.Row="21" />
+
+                    <Label Background="{Binding Path=GameBoardData.CheckPinColors[11-0]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="1" Grid.Row="23" />
+                    <Label Background="{Binding Path=GameBoardData.CheckPinColors[11-1]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="2" Grid.Row="23" />
+                    <Label Background="{Binding Path=GameBoardData.CheckPinColors[11-2]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="3" Grid.Row="23" />
+                    <Label Background="{Binding Path=GameBoardData.CheckPinColors[11-3]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="4" Grid.Row="23" />
+
+                    <Label Background="{Binding Path=GameBoardData.CheckPinColors[12-0]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="1" Grid.Row="25" />
+                    <Label Background="{Binding Path=GameBoardData.CheckPinColors[12-1]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="2" Grid.Row="25" />
+                    <Label Background="{Binding Path=GameBoardData.CheckPinColors[12-2]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="3" Grid.Row="25" />
+                    <Label Background="{Binding Path=GameBoardData.CheckPinColors[12-3]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="4" Grid.Row="25" />
+
+                    <Label Background="{Binding Path=GameBoardData.CheckPinColors[13-0]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="1" Grid.Row="27" />
+                    <Label Background="{Binding Path=GameBoardData.CheckPinColors[13-1]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="2" Grid.Row="27" />
+                    <Label Background="{Binding Path=GameBoardData.CheckPinColors[13-2]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="3" Grid.Row="27" />
+                    <Label Background="{Binding Path=GameBoardData.CheckPinColors[13-3]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="4" Grid.Row="27" />
+
+                    <Label Background="{Binding Path=GameBoardData.CheckPinColors[14-0]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="1" Grid.Row="29" />
+                    <Label Background="{Binding Path=GameBoardData.CheckPinColors[14-1]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="2" Grid.Row="29" />
+                    <Label Background="{Binding Path=GameBoardData.CheckPinColors[14-2]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="3" Grid.Row="29" />
+                    <Label Background="{Binding Path=GameBoardData.CheckPinColors[14-3]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="4" Grid.Row="29" />
+
+                </Grid>
+
+                <Grid Background="Black" Visibility="{Binding Path=GameBoardData.GameOverVisibility}" Name="GameOver4" Margin="0,-288,0,288">
+                    <Image Source="C:\Users\Lalex\source\repos\Mastermind\Mastermind\Images\GameOver.png" />
+                    <Button Content="Zurück zum Spielbrett" Command="{Binding Btn_BackToGameBoard}" CommandParameter="0" Width="150" Height="20" Margin="270,798,280,382"/>
+                </Grid>
+
+                <Grid Background="White" Visibility="{Binding Path=GameBoardData.VictoryVisibility}" Name="Victory4">
+                    <Image Source="C:\Users\Lalex\source\repos\Mastermind\Mastermind\Images\Victory.png" Margin="0,-288,0,288" />
+                    <Button Content="Zurück zum Spielbrett" Command="{Binding Btn_BackToGameBoard}" CommandParameter="0" Width="150" Height="20" Margin="271,442,279,738"/>
+                </Grid>
+
+
+            </Grid>
+
+            <Grid Name="SpielBrettCode5" Height="1200" Width="700" Visibility="{Binding Path=GameBoardData.Code5Visibility}">
+                <Grid Name="FarbPinGrid5" Background="#FF6C3100" Height="1200" Width="400" HorizontalAlignment="Left" VerticalAlignment="Top">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="45" />
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+
+                        <ColumnDefinition Width="150" />
+                        <ColumnDefinition Width="50" />
+                        <ColumnDefinition Width="50" />
+                        <ColumnDefinition Width="50" />
+                        <ColumnDefinition Width="50" />
+                        <ColumnDefinition Width="50" />
+                    </Grid.ColumnDefinitions>
+
+                    <Button x:Name="Pin10_1" Command="{Binding Btn_ChangeColor}" CommandParameter="0" Background="{Binding Path=GameBoardData.PinColors[0-0]}" Grid.Column="1" Grid.Row="1" Height="40" Width="40"/>
+                    <Button x:Name="Pin10_2" Command="{Binding Btn_ChangeColor}" CommandParameter="1" Background="{Binding Path=GameBoardData.PinColors[0-1]}" Grid.Column="2" Grid.Row="1" Height="40" Width="40"/>
+                    <Button x:Name="Pin10_3" Command="{Binding Btn_ChangeColor}" CommandParameter="2" Background="{Binding Path=GameBoardData.PinColors[0-2]}" Grid.Column="3" Grid.Row="1" Height="40" Width="40"/>
+                    <Button x:Name="Pin10_4" Command="{Binding Btn_ChangeColor}" CommandParameter="3" Background="{Binding Path=GameBoardData.PinColors[0-3]}" Grid.Column="4" Grid.Row="1" Height="40" Width="40"/>
+                    <Button x:Name="Pin10_5" Command="{Binding Btn_ChangeColor}" CommandParameter="4" Background="{Binding Path=GameBoardData.PinColors[0-4]}" Grid.Column="5" Grid.Row="1" Height="40" Width="40"/>
+
+
+                    <Button x:Name="Pin11_1" Command="{Binding Btn_ChangeColor}" CommandParameter="0" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[1-0]}" Background="{Binding Path=GameBoardData.PinColors[1-0]}" Grid.Column="1" Grid.Row="2" Height="40" Width="40"/>
+                    <Button x:Name="Pin11_2" Command="{Binding Btn_ChangeColor}" CommandParameter="1" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[1-1]}" Background="{Binding Path=GameBoardData.PinColors[1-1]}" Grid.Column="2" Grid.Row="2" Height="40" Width="40"/>
+                    <Button x:Name="Pin11_3" Command="{Binding Btn_ChangeColor}" CommandParameter="2" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[1-2]}" Background="{Binding Path=GameBoardData.PinColors[1-2]}" Grid.Column="3" Grid.Row="2" Height="40" Width="40"/>
+                    <Button x:Name="Pin11_4" Command="{Binding Btn_ChangeColor}" CommandParameter="3" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[1-3]}" Background="{Binding Path=GameBoardData.PinColors[1-3]}" Grid.Column="4" Grid.Row="2" Height="40" Width="40"/>
+                    <Button x:Name="Pin11_5" Command="{Binding Btn_ChangeColor}" CommandParameter="4" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[1-4]}" Background="{Binding Path=GameBoardData.PinColors[1-4]}" Grid.Column="5" Grid.Row="2" Height="40" Width="40"/>
+
+                    <Button x:Name="Pin12_1" Command="{Binding Btn_ChangeColor}" CommandParameter="0" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[2-0]}" Background="{Binding Path=GameBoardData.PinColors[2-0]}" Grid.Column="1" Grid.Row="3" Height="40" Width="40"/>
+                    <Button x:Name="Pin12_2" Command="{Binding Btn_ChangeColor}" CommandParameter="1" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[2-1]}" Background="{Binding Path=GameBoardData.PinColors[2-1]}" Grid.Column="2" Grid.Row="3" Height="40" Width="40"/>
+                    <Button x:Name="Pin12_3" Command="{Binding Btn_ChangeColor}" CommandParameter="2" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[2-2]}" Background="{Binding Path=GameBoardData.PinColors[2-2]}" Grid.Column="3" Grid.Row="3" Height="40" Width="40"/>
+                    <Button x:Name="Pin12_4" Command="{Binding Btn_ChangeColor}" CommandParameter="3" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[2-3]}" Background="{Binding Path=GameBoardData.PinColors[2-3]}" Grid.Column="4" Grid.Row="3" Height="40" Width="40"/>
+                    <Button x:Name="Pin12_5" Command="{Binding Btn_ChangeColor}" CommandParameter="4" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[2-4]}" Background="{Binding Path=GameBoardData.PinColors[2-4]}" Grid.Column="5" Grid.Row="3" Height="40" Width="40"/>
+
+                    <Button x:Name="Pin13_1" Command="{Binding Btn_ChangeColor}" CommandParameter="0" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[3-0]}" Background="{Binding Path=GameBoardData.PinColors[3-0]}" Grid.Column="1" Grid.Row="4" Height="40" Width="40"/>
+                    <Button x:Name="Pin13_2" Command="{Binding Btn_ChangeColor}" CommandParameter="1" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[3-1]}" Background="{Binding Path=GameBoardData.PinColors[3-1]}" Grid.Column="2" Grid.Row="4" Height="40" Width="40"/>
+                    <Button x:Name="Pin13_3" Command="{Binding Btn_ChangeColor}" CommandParameter="2" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[3-2]}" Background="{Binding Path=GameBoardData.PinColors[3-2]}" Grid.Column="3" Grid.Row="4" Height="40" Width="40"/>
+                    <Button x:Name="Pin13_4" Command="{Binding Btn_ChangeColor}" CommandParameter="3" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[3-3]}" Background="{Binding Path=GameBoardData.PinColors[3-3]}" Grid.Column="4" Grid.Row="4" Height="40" Width="40"/>
+                    <Button x:Name="Pin13_5" Command="{Binding Btn_ChangeColor}" CommandParameter="4" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[3-4]}" Background="{Binding Path=GameBoardData.PinColors[3-4]}" Grid.Column="5" Grid.Row="4" Height="40" Width="40"/>
+
+                    <Button x:Name="Pin14_1" Command="{Binding Btn_ChangeColor}" CommandParameter="0" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[4-0]}" Background="{Binding Path=GameBoardData.PinColors[4-0]}" Grid.Column="1" Grid.Row="5" Height="40" Width="40"/>
+                    <Button x:Name="Pin14_2" Command="{Binding Btn_ChangeColor}" CommandParameter="1" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[4-1]}" Background="{Binding Path=GameBoardData.PinColors[4-1]}" Grid.Column="2" Grid.Row="5" Height="40" Width="40"/>
+                    <Button x:Name="Pin14_3" Command="{Binding Btn_ChangeColor}" CommandParameter="2" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[4-2]}" Background="{Binding Path=GameBoardData.PinColors[4-2]}" Grid.Column="3" Grid.Row="5" Height="40" Width="40"/>
+                    <Button x:Name="Pin14_4" Command="{Binding Btn_ChangeColor}" CommandParameter="3" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[4-3]}" Background="{Binding Path=GameBoardData.PinColors[4-3]}" Grid.Column="4" Grid.Row="5" Height="40" Width="40"/>
+                    <Button x:Name="Pin14_5" Command="{Binding Btn_ChangeColor}" CommandParameter="4" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[4-4]}" Background="{Binding Path=GameBoardData.PinColors[4-4]}" Grid.Column="5" Grid.Row="5" Height="40" Width="40"/>
+
+                    <Button x:Name="Pin15_1" Command="{Binding Btn_ChangeColor}" CommandParameter="0" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[5-0]}" Background="{Binding Path=GameBoardData.PinColors[5-0]}" Grid.Column="1" Grid.Row="6" Height="40" Width="40"/>
+                    <Button x:Name="Pin15_2" Command="{Binding Btn_ChangeColor}" CommandParameter="1" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[5-1]}" Background="{Binding Path=GameBoardData.PinColors[5-1]}" Grid.Column="2" Grid.Row="6" Height="40" Width="40"/>
+                    <Button x:Name="Pin15_3" Command="{Binding Btn_ChangeColor}" CommandParameter="2" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[5-2]}" Background="{Binding Path=GameBoardData.PinColors[5-2]}" Grid.Column="3" Grid.Row="6" Height="40" Width="40"/>
+                    <Button x:Name="Pin15_4" Command="{Binding Btn_ChangeColor}" CommandParameter="3" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[5-3]}" Background="{Binding Path=GameBoardData.PinColors[5-3]}" Grid.Column="4" Grid.Row="6" Height="40" Width="40"/>
+                    <Button x:Name="Pin15_5" Command="{Binding Btn_ChangeColor}" CommandParameter="4" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[5-4]}" Background="{Binding Path=GameBoardData.PinColors[5-4]}" Grid.Column="5" Grid.Row="6" Height="40" Width="40"/>
+
+                    <Button x:Name="Pin16_1" Command="{Binding Btn_ChangeColor}" CommandParameter="0" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[6-0]}" Background="{Binding Path=GameBoardData.PinColors[6-0]}" Grid.Column="1" Grid.Row="7" Height="40" Width="40"/>
+                    <Button x:Name="Pin16_2" Command="{Binding Btn_ChangeColor}" CommandParameter="1" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[6-1]}" Background="{Binding Path=GameBoardData.PinColors[6-1]}" Grid.Column="2" Grid.Row="7" Height="40" Width="40"/>
+                    <Button x:Name="Pin16_3" Command="{Binding Btn_ChangeColor}" CommandParameter="2" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[6-2]}" Background="{Binding Path=GameBoardData.PinColors[6-2]}" Grid.Column="3" Grid.Row="7" Height="40" Width="40"/>
+                    <Button x:Name="Pin16_4" Command="{Binding Btn_ChangeColor}" CommandParameter="3" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[6-3]}" Background="{Binding Path=GameBoardData.PinColors[6-3]}" Grid.Column="4" Grid.Row="7" Height="40" Width="40"/>
+                    <Button x:Name="Pin16_5" Command="{Binding Btn_ChangeColor}" CommandParameter="4" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[6-4]}" Background="{Binding Path=GameBoardData.PinColors[6-4]}" Grid.Column="5" Grid.Row="7" Height="40" Width="40"/>
+
+                    <Button x:Name="Pin17_1" Command="{Binding Btn_ChangeColor}" CommandParameter="0" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[7-0]}" Background="{Binding Path=GameBoardData.PinColors[7-0]}" Grid.Column="1" Grid.Row="8" Height="40" Width="40"/>
+                    <Button x:Name="Pin17_2" Command="{Binding Btn_ChangeColor}" CommandParameter="1" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[7-1]}" Background="{Binding Path=GameBoardData.PinColors[7-1]}" Grid.Column="2" Grid.Row="8" Height="40" Width="40"/>
+                    <Button x:Name="Pin17_3" Command="{Binding Btn_ChangeColor}" CommandParameter="2" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[7-2]}" Background="{Binding Path=GameBoardData.PinColors[7-2]}" Grid.Column="3" Grid.Row="8" Height="40" Width="40"/>
+                    <Button x:Name="Pin17_4" Command="{Binding Btn_ChangeColor}" CommandParameter="3" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[7-3]}" Background="{Binding Path=GameBoardData.PinColors[7-3]}" Grid.Column="4" Grid.Row="8" Height="40" Width="40"/>
+                    <Button x:Name="Pin17_5" Command="{Binding Btn_ChangeColor}" CommandParameter="4" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[7-4]}" Background="{Binding Path=GameBoardData.PinColors[7-4]}" Grid.Column="5" Grid.Row="8" Height="40" Width="40"/>
+
+                    <Button x:Name="Pin18_1" Command="{Binding Btn_ChangeColor}" CommandParameter="0" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[8-0]}" Background="{Binding Path=GameBoardData.PinColors[8-0]}" Grid.Column="1" Grid.Row="9" Height="40" Width="40"/>
+                    <Button x:Name="Pin18_2" Command="{Binding Btn_ChangeColor}" CommandParameter="1" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[8-1]}" Background="{Binding Path=GameBoardData.PinColors[8-1]}" Grid.Column="2" Grid.Row="9" Height="40" Width="40"/>
+                    <Button x:Name="Pin18_3" Command="{Binding Btn_ChangeColor}" CommandParameter="2" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[8-2]}" Background="{Binding Path=GameBoardData.PinColors[8-2]}" Grid.Column="3" Grid.Row="9" Height="40" Width="40"/>
+                    <Button x:Name="Pin18_4" Command="{Binding Btn_ChangeColor}" CommandParameter="3" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[8-3]}" Background="{Binding Path=GameBoardData.PinColors[8-3]}" Grid.Column="4" Grid.Row="9" Height="40" Width="40"/>
+                    <Button x:Name="Pin18_5" Command="{Binding Btn_ChangeColor}" CommandParameter="4" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[8-4]}" Background="{Binding Path=GameBoardData.PinColors[8-4]}" Grid.Column="5" Grid.Row="9" Height="40" Width="40"/>
+
+                    <Button x:Name="Pin19_1" Command="{Binding Btn_ChangeColor}" CommandParameter="0" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[9-0]}" Background="{Binding Path=GameBoardData.PinColors[9-0]}" Grid.Column="1" Grid.Row="10"  Height="40" Width="40"/>
+                    <Button x:Name="Pin19_2" Command="{Binding Btn_ChangeColor}" CommandParameter="1" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[9-1]}" Background="{Binding Path=GameBoardData.PinColors[9-1]}" Grid.Column="2" Grid.Row="10"  Height="40" Width="40"/>
+                    <Button x:Name="Pin19_3" Command="{Binding Btn_ChangeColor}" CommandParameter="2" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[9-2]}" Background="{Binding Path=GameBoardData.PinColors[9-2]}" Grid.Column="3" Grid.Row="10"  Height="40" Width="40"/>
+                    <Button x:Name="Pin19_4" Command="{Binding Btn_ChangeColor}" CommandParameter="3" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[9-3]}" Background="{Binding Path=GameBoardData.PinColors[9-3]}" Grid.Column="4" Grid.Row="10"  Height="40" Width="40"/>
+                    <Button x:Name="Pin19_5" Command="{Binding Btn_ChangeColor}" CommandParameter="4" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[9-4]}" Background="{Binding Path=GameBoardData.PinColors[9-4]}" Grid.Column="5" Grid.Row="10"  Height="40" Width="40"/>
+
+                    <Button x:Name="Pin20_1" Command="{Binding Btn_ChangeColor}" CommandParameter="0" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[10-0]}" Background="{Binding Path=GameBoardData.PinColors[10-0]}" Grid.Column="1" Grid.Row="11" Height="40" Width="40"/>
+                    <Button x:Name="Pin20_2" Command="{Binding Btn_ChangeColor}" CommandParameter="1" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[10-1]}" Background="{Binding Path=GameBoardData.PinColors[10-1]}" Grid.Column="2" Grid.Row="11" Height="40" Width="40"/>
+                    <Button x:Name="Pin20_3" Command="{Binding Btn_ChangeColor}" CommandParameter="2" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[10-2]}" Background="{Binding Path=GameBoardData.PinColors[10-2]}" Grid.Column="3" Grid.Row="11" Height="40" Width="40"/>
+                    <Button x:Name="Pin20_4" Command="{Binding Btn_ChangeColor}" CommandParameter="3" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[10-3]}" Background="{Binding Path=GameBoardData.PinColors[10-3]}" Grid.Column="4" Grid.Row="11" Height="40" Width="40"/>
+                    <Button x:Name="Pin20_5" Command="{Binding Btn_ChangeColor}" CommandParameter="4" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[10-4]}" Background="{Binding Path=GameBoardData.PinColors[10-4]}" Grid.Column="5" Grid.Row="11" Height="40" Width="40"/>
+
+                    <Button x:Name="Pin21_1" Command="{Binding Btn_ChangeColor}" CommandParameter="0" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[11-0]}" Background="{Binding Path=GameBoardData.PinColors[11-0]}" Grid.Column="1" Grid.Row="12" Height="40" Width="40"/>
+                    <Button x:Name="Pin21_2" Command="{Binding Btn_ChangeColor}" CommandParameter="1" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[11-1]}" Background="{Binding Path=GameBoardData.PinColors[11-1]}" Grid.Column="2" Grid.Row="12" Height="40" Width="40"/>
+                    <Button x:Name="Pin21_3" Command="{Binding Btn_ChangeColor}" CommandParameter="2" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[11-2]}" Background="{Binding Path=GameBoardData.PinColors[11-2]}" Grid.Column="3" Grid.Row="12" Height="40" Width="40"/>
+                    <Button x:Name="Pin21_4" Command="{Binding Btn_ChangeColor}" CommandParameter="3" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[11-3]}" Background="{Binding Path=GameBoardData.PinColors[11-3]}" Grid.Column="4" Grid.Row="12" Height="40" Width="40"/>
+                    <Button x:Name="Pin21_5" Command="{Binding Btn_ChangeColor}" CommandParameter="4" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[11-4]}" Background="{Binding Path=GameBoardData.PinColors[11-4]}" Grid.Column="5" Grid.Row="12" Height="40" Width="40"/>
+
+                    <Button x:Name="Pin22_1" Command="{Binding Btn_ChangeColor}" CommandParameter="0" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[12-0]}" Background="{Binding Path=GameBoardData.PinColors[12-0]}" Grid.Column="1" Grid.Row="13" Height="40" Width="40"/>
+                    <Button x:Name="Pin22_2" Command="{Binding Btn_ChangeColor}" CommandParameter="1" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[12-1]}" Background="{Binding Path=GameBoardData.PinColors[12-1]}" Grid.Column="2" Grid.Row="13" Height="40" Width="40"/>
+                    <Button x:Name="Pin22_3" Command="{Binding Btn_ChangeColor}" CommandParameter="2" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[12-2]}" Background="{Binding Path=GameBoardData.PinColors[12-2]}" Grid.Column="3" Grid.Row="13" Height="40" Width="40"/>
+                    <Button x:Name="Pin22_4" Command="{Binding Btn_ChangeColor}" CommandParameter="3" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[12-3]}" Background="{Binding Path=GameBoardData.PinColors[12-3]}" Grid.Column="4" Grid.Row="13" Height="40" Width="40"/>
+                    <Button x:Name="Pin22_5" Command="{Binding Btn_ChangeColor}" CommandParameter="4" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[12-4]}" Background="{Binding Path=GameBoardData.PinColors[12-4]}" Grid.Column="5" Grid.Row="13" Height="40" Width="40"/>
+
+                    <Button x:Name="Pin23_1" Command="{Binding Btn_ChangeColor}" CommandParameter="0" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[13-0]}" Background="{Binding Path=GameBoardData.PinColors[13-0]}" Grid.Column="1" Grid.Row="14" Height="40" Width="40"/>
+                    <Button x:Name="Pin23_2" Command="{Binding Btn_ChangeColor}" CommandParameter="1" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[13-1]}" Background="{Binding Path=GameBoardData.PinColors[13-1]}" Grid.Column="2" Grid.Row="14" Height="40" Width="40"/>
+                    <Button x:Name="Pin23_3" Command="{Binding Btn_ChangeColor}" CommandParameter="2" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[13-2]}" Background="{Binding Path=GameBoardData.PinColors[13-2]}" Grid.Column="3" Grid.Row="14" Height="40" Width="40"/>
+                    <Button x:Name="Pin23_4" Command="{Binding Btn_ChangeColor}" CommandParameter="3" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[13-3]}" Background="{Binding Path=GameBoardData.PinColors[13-3]}" Grid.Column="4" Grid.Row="14" Height="40" Width="40"/>
+                    <Button x:Name="Pin23_5" Command="{Binding Btn_ChangeColor}" CommandParameter="4" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[13-4]}" Background="{Binding Path=GameBoardData.PinColors[13-4]}" Grid.Column="5" Grid.Row="14" Height="40" Width="40"/>
+
+                    <Button x:Name="Pin24_1" Command="{Binding Btn_ChangeColor}" CommandParameter="0" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[14-0]}" Background="{Binding Path=GameBoardData.PinColors[14-0]}" Grid.Column="1" Grid.Row="15" Height="40" Width="40"/>
+                    <Button x:Name="Pin24_2" Command="{Binding Btn_ChangeColor}" CommandParameter="1" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[14-1]}" Background="{Binding Path=GameBoardData.PinColors[14-1]}" Grid.Column="2" Grid.Row="15" Height="40" Width="40"/>
+                    <Button x:Name="Pin24_3" Command="{Binding Btn_ChangeColor}" CommandParameter="2" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[14-2]}" Background="{Binding Path=GameBoardData.PinColors[14-2]}" Grid.Column="3" Grid.Row="15" Height="40" Width="40"/>
+                    <Button x:Name="Pin24_4" Command="{Binding Btn_ChangeColor}" CommandParameter="3" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[14-3]}" Background="{Binding Path=GameBoardData.PinColors[14-3]}" Grid.Column="4" Grid.Row="15" Height="40" Width="40"/>
+                    <Button x:Name="Pin24_5" Command="{Binding Btn_ChangeColor}" CommandParameter="4" Visibility="{Binding Path=GameBoardData.ColorPinVisibility[14-4]}" Background="{Binding Path=GameBoardData.PinColors[14-4]}" Grid.Column="5" Grid.Row="15" Height="40" Width="40"/>
+
+
+                    <Button x:Name="Btn_Pruefung25_1" Command="{Binding Btn_CheckCode}" CommandParameter="0" Content="Überprüfen" FontSize="25" Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="17"/>
+
+
+                    <Label  Height="4" BorderThickness="3" BorderBrush="Black" Grid.Row="1" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="5"/>
+                    <Label  Height="4" BorderThickness="3" BorderBrush="Black" Grid.Row="2" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="5"/>
+                    <Label  Height="4" BorderThickness="3" BorderBrush="Black" Grid.Row="3" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="5"/>
+                    <Label  Height="4" BorderThickness="3" BorderBrush="Black" Grid.Row="4" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="5"/>
+                    <Label  Height="4" BorderThickness="3" BorderBrush="Black" Grid.Row="5" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="5"/>
+                    <Label  Height="4" BorderThickness="3" BorderBrush="Black" Grid.Row="6" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="5"/>
+                    <Label  Height="4" BorderThickness="3" BorderBrush="Black" Grid.Row="7" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="5"/>
+                    <Label  Height="4" BorderThickness="3" BorderBrush="Black" Grid.Row="8" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="5"/>
+                    <Label  Height="4" BorderThickness="3" BorderBrush="Black" Grid.Row="9" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="5"/>
+                    <Label  Height="4" BorderThickness="3" BorderBrush="Black" Grid.Row="10" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="5"/>
+                    <Label  Height="4" BorderThickness="3" BorderBrush="Black" Grid.Row="11" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="5"/>
+                    <Label  Height="4" BorderThickness="3" BorderBrush="Black" Grid.Row="12" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="5"/>
+                    <Label  Height="4" BorderThickness="3" BorderBrush="Black" Grid.Row="13" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="5"/>
+                    <Label  Height="4" BorderThickness="3" BorderBrush="Black" Grid.Row="14" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="5"/>
+                    <Label  Height="4" BorderThickness="3" BorderBrush="Black" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="5" Margin="0,1,0,46"/>
+                    <Label  Height="4" BorderThickness="3" BorderBrush="Black" Grid.Row="16" Grid.Column="1" Grid.ColumnSpan="5" Margin="0,0,0,97"/>
+                    <Label BorderThickness="3" BorderBrush="Black" Grid.Row="1" Grid.RowSpan="15" Grid.Column="1" Margin="0,0,47,0" />
+                    <Label BorderThickness="3" BorderBrush="Black" Grid.Row="1" Grid.RowSpan="16" Grid.Column="5" Margin="47,5,0,97" />
+
+                    <Label Grid.Row="0" Grid.Column="0" Content="{Binding Path=GameBoardData.Try}"/>
+
+                </Grid>
+
+
+                <Grid Name="KontrollPinGrid5" Background="#FF6C3100" Height="1200" Width="300" HorizontalAlignment="Right" VerticalAlignment="Top">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50"/>
+                        <ColumnDefinition Width="20"/>
+                        <ColumnDefinition Width="20"/>
+                        <ColumnDefinition Width="20"/>
+                        <ColumnDefinition Width="20"/>
+                        <ColumnDefinition Width="20"/>
+                        <ColumnDefinition Width="200"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="300"/>
+
+                    </Grid.RowDefinitions>
+
+                    <Label x:Name="KPin10_1" Background="{Binding Path=GameBoardData.CheckPinColors[0-0]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="1" Grid.Row="1" />
+                    <Label x:Name="KPin10_2" Background="{Binding Path=GameBoardData.CheckPinColors[0-1]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="2" Grid.Row="1" />
+                    <Label x:Name="KPin10_3" Background="{Binding Path=GameBoardData.CheckPinColors[0-2]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="3" Grid.Row="1" />
+                    <Label x:Name="KPin10_4" Background="{Binding Path=GameBoardData.CheckPinColors[0-3]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="4" Grid.Row="1" />
+                    <Label x:Name="KPin10_5" Background="{Binding Path=GameBoardData.CheckPinColors[0-4]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="5" Grid.Row="1" />
+
+                    <Label x:Name="KPin11_1" Background="{Binding Path=GameBoardData.CheckPinColors[1-0]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="1" Grid.Row="3" />
+                    <Label x:Name="KPin11_2" Background="{Binding Path=GameBoardData.CheckPinColors[1-1]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="2" Grid.Row="3" />
+                    <Label x:Name="KPin11_3" Background="{Binding Path=GameBoardData.CheckPinColors[1-2]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="3" Grid.Row="3" />
+                    <Label x:Name="KPin11_4" Background="{Binding Path=GameBoardData.CheckPinColors[1-3]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="4" Grid.Row="3" />
+                    <Label x:Name="KPin11_5" Background="{Binding Path=GameBoardData.CheckPinColors[1-4]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="5" Grid.Row="3" />
+
+                    <Label x:Name="KPin12_1" Background="{Binding Path=GameBoardData.CheckPinColors[2-0]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="1" Grid.Row="5" />
+                    <Label x:Name="KPin12_2" Background="{Binding Path=GameBoardData.CheckPinColors[2-1]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="2" Grid.Row="5" />
+                    <Label x:Name="KPin12_3" Background="{Binding Path=GameBoardData.CheckPinColors[2-2]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="3" Grid.Row="5" />
+                    <Label x:Name="KPin12_4" Background="{Binding Path=GameBoardData.CheckPinColors[2-3]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="4" Grid.Row="5" />
+                    <Label x:Name="KPin12_5" Background="{Binding Path=GameBoardData.CheckPinColors[2-4]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="5" Grid.Row="5" />
+
+                    <Label x:Name="KPin13_1" Background="{Binding Path=GameBoardData.CheckPinColors[3-0]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="1" Grid.Row="7" />
+                    <Label x:Name="KPin13_2" Background="{Binding Path=GameBoardData.CheckPinColors[3-1]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="2" Grid.Row="7" />
+                    <Label x:Name="KPin13_3" Background="{Binding Path=GameBoardData.CheckPinColors[3-2]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="3" Grid.Row="7" />
+                    <Label x:Name="KPin13_4" Background="{Binding Path=GameBoardData.CheckPinColors[3-3]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="4" Grid.Row="7" />
+                    <Label x:Name="KPin13_5" Background="{Binding Path=GameBoardData.CheckPinColors[3-4]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="5" Grid.Row="7" />
+
+                    <Label x:Name="KPin14_1" Background="{Binding Path=GameBoardData.CheckPinColors[4-0]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="1" Grid.Row="9" />
+                    <Label x:Name="KPin14_2" Background="{Binding Path=GameBoardData.CheckPinColors[4-1]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="2" Grid.Row="9" />
+                    <Label x:Name="KPin14_3" Background="{Binding Path=GameBoardData.CheckPinColors[4-2]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="3" Grid.Row="9" />
+                    <Label x:Name="KPin14_4" Background="{Binding Path=GameBoardData.CheckPinColors[4-3]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="4" Grid.Row="9" />
+                    <Label x:Name="KPin14_5" Background="{Binding Path=GameBoardData.CheckPinColors[4-4]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="5" Grid.Row="9" />
+
+                    <Label x:Name="KPin15_1" Background="{Binding Path=GameBoardData.CheckPinColors[5-0]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="1" Grid.Row="11" />
+                    <Label x:Name="KPin15_2" Background="{Binding Path=GameBoardData.CheckPinColors[5-1]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="2" Grid.Row="11" />
+                    <Label x:Name="KPin15_3" Background="{Binding Path=GameBoardData.CheckPinColors[5-2]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="3" Grid.Row="11" />
+                    <Label x:Name="KPin15_4" Background="{Binding Path=GameBoardData.CheckPinColors[5-3]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="4" Grid.Row="11" />
+                    <Label x:Name="KPin15_5" Background="{Binding Path=GameBoardData.CheckPinColors[5-4]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="5" Grid.Row="11" />
+
+                    <Label x:Name="KPin16_1" Background="{Binding Path=GameBoardData.CheckPinColors[6-0]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="1" Grid.Row="13" />
+                    <Label x:Name="KPin16_2" Background="{Binding Path=GameBoardData.CheckPinColors[6-1]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="2" Grid.Row="13" />
+                    <Label x:Name="KPin16_3" Background="{Binding Path=GameBoardData.CheckPinColors[6-2]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="3" Grid.Row="13" />
+                    <Label x:Name="KPin16_4" Background="{Binding Path=GameBoardData.CheckPinColors[6-3]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="4" Grid.Row="13" />
+                    <Label x:Name="KPin16_5" Background="{Binding Path=GameBoardData.CheckPinColors[6-4]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="5" Grid.Row="13" />
+
+                    <Label x:Name="KPin17_1" Background="{Binding Path=GameBoardData.CheckPinColors[7-0]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="1" Grid.Row="15" />
+                    <Label x:Name="KPin17_2" Background="{Binding Path=GameBoardData.CheckPinColors[7-1]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="2" Grid.Row="15" />
+                    <Label x:Name="KPin17_3" Background="{Binding Path=GameBoardData.CheckPinColors[7-2]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="3" Grid.Row="15" />
+                    <Label x:Name="KPin17_4" Background="{Binding Path=GameBoardData.CheckPinColors[7-3]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="4" Grid.Row="15" />
+                    <Label x:Name="KPin17_5" Background="{Binding Path=GameBoardData.CheckPinColors[7-4]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="5" Grid.Row="15" />
+
+                    <Label x:Name="KPin18_1" Background="{Binding Path=GameBoardData.CheckPinColors[8-0]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="1" Grid.Row="17" />
+                    <Label x:Name="KPin18_2" Background="{Binding Path=GameBoardData.CheckPinColors[8-1]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="2" Grid.Row="17" />
+                    <Label x:Name="KPin18_3" Background="{Binding Path=GameBoardData.CheckPinColors[8-2]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="3" Grid.Row="17" />
+                    <Label x:Name="KPin18_4" Background="{Binding Path=GameBoardData.CheckPinColors[8-3]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="4" Grid.Row="17" />
+                    <Label x:Name="KPin18_5" Background="{Binding Path=GameBoardData.CheckPinColors[8-4]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="5" Grid.Row="17" />
+
+                    <Label x:Name="KPin19_1" Background="{Binding Path=GameBoardData.CheckPinColors[9-0]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="1" Grid.Row="19" />
+                    <Label x:Name="KPin19_2" Background="{Binding Path=GameBoardData.CheckPinColors[9-1]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="2" Grid.Row="19" />
+                    <Label x:Name="KPin19_3" Background="{Binding Path=GameBoardData.CheckPinColors[9-2]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="3" Grid.Row="19" />
+                    <Label x:Name="KPin19_4" Background="{Binding Path=GameBoardData.CheckPinColors[9-3]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="4" Grid.Row="19" />
+                    <Label x:Name="KPin19_5" Background="{Binding Path=GameBoardData.CheckPinColors[9-4]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="5" Grid.Row="19" />
+
+                    <Label x:Name="KPin20_1" Background="{Binding Path=GameBoardData.CheckPinColors[10-0]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="1" Grid.Row="21" />
+                    <Label x:Name="KPin20_2" Background="{Binding Path=GameBoardData.CheckPinColors[10-1]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="2" Grid.Row="21" />
+                    <Label x:Name="KPin20_3" Background="{Binding Path=GameBoardData.CheckPinColors[10-2]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="3" Grid.Row="21" />
+                    <Label x:Name="KPin20_4" Background="{Binding Path=GameBoardData.CheckPinColors[10-3]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="4" Grid.Row="21" />
+                    <Label x:Name="KPin20_5" Background="{Binding Path=GameBoardData.CheckPinColors[10-4]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="5" Grid.Row="21" />
+
+                    <Label x:Name="KPin21_1" Background="{Binding Path=GameBoardData.CheckPinColors[11-0]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="1" Grid.Row="23" />
+                    <Label x:Name="KPin21_2" Background="{Binding Path=GameBoardData.CheckPinColors[11-1]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="2" Grid.Row="23" />
+                    <Label x:Name="KPin21_3" Background="{Binding Path=GameBoardData.CheckPinColors[11-2]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="3" Grid.Row="23" />
+                    <Label x:Name="KPin21_4" Background="{Binding Path=GameBoardData.CheckPinColors[11-3]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="4" Grid.Row="23" />
+                    <Label x:Name="KPin21_5" Background="{Binding Path=GameBoardData.CheckPinColors[11-4]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="5" Grid.Row="23" />
+
+                    <Label x:Name="KPin22_1" Background="{Binding Path=GameBoardData.CheckPinColors[12-0]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="1" Grid.Row="25" />
+                    <Label x:Name="KPin22_2" Background="{Binding Path=GameBoardData.CheckPinColors[12-1]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="2" Grid.Row="25" />
+                    <Label x:Name="KPin22_3" Background="{Binding Path=GameBoardData.CheckPinColors[12-2]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="3" Grid.Row="25" />
+                    <Label x:Name="KPin22_4" Background="{Binding Path=GameBoardData.CheckPinColors[12-3]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="4" Grid.Row="25" />
+                    <Label x:Name="KPin22_5" Background="{Binding Path=GameBoardData.CheckPinColors[12-4]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="5" Grid.Row="25" />
+
+                    <Label x:Name="KPin23_1" Background="{Binding Path=GameBoardData.CheckPinColors[13-0]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="1" Grid.Row="27" />
+                    <Label x:Name="KPin23_2" Background="{Binding Path=GameBoardData.CheckPinColors[13-1]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="2" Grid.Row="27" />
+                    <Label x:Name="KPin23_3" Background="{Binding Path=GameBoardData.CheckPinColors[13-2]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="3" Grid.Row="27" />
+                    <Label x:Name="KPin23_4" Background="{Binding Path=GameBoardData.CheckPinColors[13-3]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="4" Grid.Row="27" />
+                    <Label x:Name="KPin23_5" Background="{Binding Path=GameBoardData.CheckPinColors[13-4]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="5" Grid.Row="27" />
+
+                    <Label x:Name="KPin24_1" Background="{Binding Path=GameBoardData.CheckPinColors[14-0]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="1" Grid.Row="29" />
+                    <Label x:Name="KPin24_2" Background="{Binding Path=GameBoardData.CheckPinColors[14-1]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="2" Grid.Row="29" />
+                    <Label x:Name="KPin24_3" Background="{Binding Path=GameBoardData.CheckPinColors[14-2]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="3" Grid.Row="29" />
+                    <Label x:Name="KPin24_4" Background="{Binding Path=GameBoardData.CheckPinColors[14-3]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="4" Grid.Row="29" />
+                    <Label x:Name="KPin24_5" Background="{Binding Path=GameBoardData.CheckPinColors[14-4]}" BorderThickness="1" BorderBrush="Gray" Grid.Column="5" Grid.Row="29" />
+
+                </Grid >
+
+                <Grid Background="Black" Visibility="{Binding Path=GameBoardData.GameOverVisibility}" Name="GameOver5" Margin="0,-288,0,288">
+                    <Image Source="C:\Users\Lalex\source\repos\Mastermind\Mastermind\Images\GameOver.png" />
+                    <Button Content="Zurück zum Spielbrett" Command="{Binding Btn_BackToGameBoard}" CommandParameter="0" Width="150" Height="20" Margin="270,798,280,382"/>
+                </Grid>
+
+                <Grid Background="White" Visibility="{Binding Path=GameBoardData.VictoryVisibility}" Name="Victory5">
+                    <Image Source="C:\Users\Lalex\source\repos\Mastermind\Mastermind\Images\Victory.png" Margin="0,-288,0,288" />
+                    <Button Content="Zurück zum Spielbrett" Command="{Binding Btn_BackToGameBoard}" CommandParameter="0" Width="150" Height="20" Margin="271,442,279,738"/>
+                </Grid>
+
+
+
+            </Grid>
+        </Grid>
+
+    </ScrollViewer>
+
+
+</UserControl>
