@@ -122,3 +122,4 @@ C:\Users\Lalex\Desktop\Mastermind Repository\Mastermind\obj\Debug\Mastermind.csp
 C:\Users\Lalex\Desktop\Mastermind Repository\Mastermind\obj\Debug\Mastermind.csproj.CopyComplete
 C:\Users\Lalex\Desktop\Mastermind Repository\Mastermind\obj\Debug\Mastermind.exe
 C:\Users\Lalex\Desktop\Mastermind Repository\Mastermind\obj\Debug\Mastermind.pdb
+C:\Users\Lalex\Desktop\Mastermind Repository\Mastermind\bin\Debug\ViewModels\ViewModelGameBoard.cs
