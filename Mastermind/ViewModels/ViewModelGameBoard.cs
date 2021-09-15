@@ -56,12 +56,7 @@ namespace Mastermind.ViewModels
             GameBoardData.Try = "Restliche Versuche: " + Data.InputVersuche;
 
             ColorList = FillColorList(farben);
-            //ComputerCode.generieren(ColorList);
-            ComputerCode.setPin(0, new Farbpin(Colors.Blue));
-            ComputerCode.setPin(1, new Farbpin(Colors.Violet));
-            ComputerCode.setPin(2, new Farbpin(Colors.LightSkyBlue));
-            ComputerCode.setPin(3, new Farbpin(Colors.Yellow));
-            ComputerCode.setPin(4, new Farbpin(Colors.Blue));
+            ComputerCode.generieren(ColorList);
 
             for (int i = 0; i < Data.InputCodeLaenge; i++)
             {
