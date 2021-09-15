@@ -56,7 +56,12 @@ namespace Mastermind.ViewModels
             GameBoardData.Try = "Restliche Versuche: " + Data.InputVersuche;
 
             ColorList = FillColorList(farben);
-            ComputerCode.generieren(ColorList);
+            //ComputerCode.generieren(ColorList);
+            ComputerCode.setPin(0, new Farbpin(Colors.Blue));
+            ComputerCode.setPin(1, new Farbpin(Colors.Violet));
+            ComputerCode.setPin(2, new Farbpin(Colors.LightSkyBlue));
+            ComputerCode.setPin(3, new Farbpin(Colors.Yellow));
+            ComputerCode.setPin(4, new Farbpin(Colors.Blue));
 
             for (int i = 0; i < Data.InputCodeLaenge; i++)
             {
@@ -214,7 +219,8 @@ namespace Mastermind.ViewModels
                 Hit = false;
                 foreach (Farbpin ComputerPin in ComputerCode.getPins())
                 {
-                    if (UserPin.Color == ComputerPin.Color && GameBoardData.CheckPinColors[Versuch, UserCounter] != "Red" && GameBoardData.CheckPinColors[Versuch, ComputerCounter] != "Red" && Hit == false)
+                    if (UserPin.Color == ComputerPin.Color && GameBoardData.CheckPinColors[Versuch, UserCounter] != "Red" && GameBoardData.CheckPinColors[Versuch, ComputerCounter] != "Red" && Hit == false &&
+                        GameBoardData.CheckPinColors[Versuch, ComputerCounter] !="White")
                     {
                         GameBoardData.CheckPinColors[Versuch, ComputerCounter] = "White";
                         Hit = true;
