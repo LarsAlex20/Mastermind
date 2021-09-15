@@ -196,3 +196,4 @@ C:\Users\Lalex\Desktop\Mastermind Repository\Mastermind.Tests\obj\Debug\netcorea
 C:\Users\Lalex\Desktop\Mastermind Repository\Mastermind.Tests\obj\Debug\netcoreapp3.1\Mastermind.Tests.dll
 C:\Users\Lalex\Desktop\Mastermind Repository\Mastermind.Tests\obj\Debug\netcoreapp3.1\Mastermind.Tests.pdb
 C:\Users\Lalex\Desktop\Mastermind Repository\Mastermind.Tests\obj\Debug\netcoreapp3.1\Mastermind.Tests.genruntimeconfig.cache
+C:\Users\Lalex\Desktop\Mastermind Repository\Mastermind.Tests\bin\Debug\netcoreapp3.1\ViewModels\ViewModelGameBoard.cs

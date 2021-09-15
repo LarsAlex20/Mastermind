@@ -30,3 +30,36 @@ C:\Users\Lalex\source\repos\Mastermind_New\Mastermind\obj\Release\Mastermind.csp
 C:\Users\Lalex\source\repos\Mastermind_New\Mastermind\obj\Release\Mastermind.csproj.CopyComplete
 C:\Users\Lalex\source\repos\Mastermind_New\Mastermind\obj\Release\Mastermind.exe
 C:\Users\Lalex\source\repos\Mastermind_New\Mastermind\obj\Release\Mastermind.pdb
+C:\Users\Lalex\Desktop\Mastermind Repository\Mastermind\bin\Release\ViewModels\ViewModelGameBoard.cs
+C:\Users\Lalex\Desktop\Mastermind Repository\Mastermind\bin\Release\Mastermind.exe.config
+C:\Users\Lalex\Desktop\Mastermind Repository\Mastermind\bin\Release\Mastermind.exe
+C:\Users\Lalex\Desktop\Mastermind Repository\Mastermind\bin\Release\Mastermind.pdb
+C:\Users\Lalex\Desktop\Mastermind Repository\Mastermind\bin\Release\Caliburn.Micro.Core.dll
+C:\Users\Lalex\Desktop\Mastermind Repository\Mastermind\bin\Release\Xamarin.Forms.Core.dll
+C:\Users\Lalex\Desktop\Mastermind Repository\Mastermind\bin\Release\Xamarin.Forms.Platform.dll
+C:\Users\Lalex\Desktop\Mastermind Repository\Mastermind\bin\Release\Xamarin.Forms.Xaml.dll
+C:\Users\Lalex\Desktop\Mastermind Repository\Mastermind\bin\Release\Caliburn.Micro.Core.pdb
+C:\Users\Lalex\Desktop\Mastermind Repository\Mastermind\bin\Release\Caliburn.Micro.Core.xml
+C:\Users\Lalex\Desktop\Mastermind Repository\Mastermind\bin\Release\Xamarin.Forms.Core.pdb
+C:\Users\Lalex\Desktop\Mastermind Repository\Mastermind\bin\Release\Xamarin.Forms.Core.xml
+C:\Users\Lalex\Desktop\Mastermind Repository\Mastermind\bin\Release\Xamarin.Forms.Xaml.pdb
+C:\Users\Lalex\Desktop\Mastermind Repository\Mastermind\bin\Release\Xamarin.Forms.Xaml.xml
+C:\Users\Lalex\Desktop\Mastermind Repository\Mastermind\obj\Release\Mastermind.csprojAssemblyReference.cache
+C:\Users\Lalex\Desktop\Mastermind Repository\Mastermind\obj\Release\Views\MainWindow.g.cs
+C:\Users\Lalex\Desktop\Mastermind Repository\Mastermind\obj\Release\Views\Menu.g.cs
+C:\Users\Lalex\Desktop\Mastermind Repository\Mastermind\obj\Release\Views\Spielbrett.g.cs
+C:\Users\Lalex\Desktop\Mastermind Repository\Mastermind\obj\Release\App.g.cs
+C:\Users\Lalex\Desktop\Mastermind Repository\Mastermind\obj\Release\GeneratedInternalTypeHelper.g.cs
+C:\Users\Lalex\Desktop\Mastermind Repository\Mastermind\obj\Release\Mastermind_MarkupCompile.cache
+C:\Users\Lalex\Desktop\Mastermind Repository\Mastermind\obj\Release\Mastermind_MarkupCompile.lref
+C:\Users\Lalex\Desktop\Mastermind Repository\Mastermind\obj\Release\App.baml
+C:\Users\Lalex\Desktop\Mastermind Repository\Mastermind\obj\Release\Views\MainWindow.baml
+C:\Users\Lalex\Desktop\Mastermind Repository\Mastermind\obj\Release\Views\Menu.baml
+C:\Users\Lalex\Desktop\Mastermind Repository\Mastermind\obj\Release\Views\Spielbrett.baml
+C:\Users\Lalex\Desktop\Mastermind Repository\Mastermind\obj\Release\Mastermind.g.resources
+C:\Users\Lalex\Desktop\Mastermind Repository\Mastermind\obj\Release\Mastermind.Properties.Resources.resources
+C:\Users\Lalex\Desktop\Mastermind Repository\Mastermind\obj\Release\Mastermind.csproj.GenerateResource.cache
+C:\Users\Lalex\Desktop\Mastermind Repository\Mastermind\obj\Release\Mastermind.csproj.CoreCompileInputs.cache
+C:\Users\Lalex\Desktop\Mastermind Repository\Mastermind\obj\Release\Mastermind.csproj.CopyComplete
+C:\Users\Lalex\Desktop\Mastermind Repository\Mastermind\obj\Release\Mastermind.exe
+C:\Users\Lalex\Desktop\Mastermind Repository\Mastermind\obj\Release\Mastermind.pdb
